@@ -9,13 +9,31 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".PodcastsActivity"
-            android:label="@string/podcast">
+        <activity
+            android:name=".PodcastsActivity"
+            android:label="@string/podcast"
+            android:parentActivityName=".MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
         </activity>
-        <activity android:name=".PlayListActivity"
-            android:label="@string/playlist"/>
-        <activity android:name=".MusicActivity"
-            android:label="@string/music"/>
+        <activity
+            android:name=".PlayListActivity"
+            android:label="@string/playlist"
+            android:parentActivityName=".MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>
+
+        <activity
+            android:name=".MusicActivity"
+            android:label="@string/music"
+            android:parentActivityName=".MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>
 
         <activity android:name=".MainActivity">
             <intent-filter>
